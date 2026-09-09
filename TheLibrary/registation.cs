@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace TheLibrary
 {
@@ -23,6 +24,19 @@ namespace TheLibrary
         }
 
         private void cancelregisbtn_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void Registerbtn_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void Regbacklbl_Click(object sender, EventArgs e)
         {
             login login = new login();
             login.Show();

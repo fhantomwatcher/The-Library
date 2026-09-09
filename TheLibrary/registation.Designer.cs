@@ -31,10 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registation));
             this.Thelibrarytitle = new System.Windows.Forms.Label();
             this.registationlbl = new System.Windows.Forms.Label();
-            this.fstnlbl = new System.Windows.Forms.Label();
-            this.fstntxt = new System.Windows.Forms.TextBox();
-            this.lstnlbl = new System.Windows.Forms.Label();
-            this.lstntxt = new System.Windows.Forms.TextBox();
+            this.fnlbl = new System.Windows.Forms.Label();
+            this.fntxt = new System.Windows.Forms.TextBox();
             this.emaillbl = new System.Windows.Forms.Label();
             this.emailtxt = new System.Windows.Forms.TextBox();
             this.doblbl = new System.Windows.Forms.Label();
@@ -48,6 +46,10 @@
             this.genderFemalerb = new System.Windows.Forms.RadioButton();
             this.Registerbtn = new System.Windows.Forms.Button();
             this.cancelregisbtn = new System.Windows.Forms.Button();
+            this.lblerrorinput = new System.Windows.Forms.Label();
+            this.phonelbl = new System.Windows.Forms.Label();
+            this.phonetxt = new System.Windows.Forms.TextBox();
+            this.Regbacklbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Thelibrarytitle
@@ -71,39 +73,22 @@
             this.registationlbl.TabIndex = 2;
             this.registationlbl.Text = "Registation";
             // 
-            // fstnlbl
+            // fnlbl
             // 
-            this.fstnlbl.AutoSize = true;
-            this.fstnlbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fstnlbl.Location = new System.Drawing.Point(74, 98);
-            this.fstnlbl.Name = "fstnlbl";
-            this.fstnlbl.Size = new System.Drawing.Size(90, 19);
-            this.fstnlbl.TabIndex = 3;
-            this.fstnlbl.Text = "First Name";
+            this.fnlbl.AutoSize = true;
+            this.fnlbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fnlbl.Location = new System.Drawing.Point(74, 98);
+            this.fnlbl.Name = "fnlbl";
+            this.fnlbl.Size = new System.Drawing.Size(85, 19);
+            this.fnlbl.TabIndex = 3;
+            this.fnlbl.Text = "Full Name";
             // 
-            // fstntxt
+            // fntxt
             // 
-            this.fstntxt.Location = new System.Drawing.Point(170, 98);
-            this.fstntxt.Name = "fstntxt";
-            this.fstntxt.Size = new System.Drawing.Size(207, 22);
-            this.fstntxt.TabIndex = 4;
-            // 
-            // lstnlbl
-            // 
-            this.lstnlbl.AutoSize = true;
-            this.lstnlbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstnlbl.Location = new System.Drawing.Point(427, 101);
-            this.lstnlbl.Name = "lstnlbl";
-            this.lstnlbl.Size = new System.Drawing.Size(89, 19);
-            this.lstnlbl.TabIndex = 5;
-            this.lstnlbl.Text = "Last Name";
-            // 
-            // lstntxt
-            // 
-            this.lstntxt.Location = new System.Drawing.Point(522, 101);
-            this.lstntxt.Name = "lstntxt";
-            this.lstntxt.Size = new System.Drawing.Size(207, 22);
-            this.lstntxt.TabIndex = 6;
+            this.fntxt.Location = new System.Drawing.Point(170, 98);
+            this.fntxt.Name = "fntxt";
+            this.fntxt.Size = new System.Drawing.Size(207, 22);
+            this.fntxt.TabIndex = 4;
             // 
             // emaillbl
             // 
@@ -224,6 +209,7 @@
             this.Registerbtn.TabIndex = 18;
             this.Registerbtn.Text = "Register";
             this.Registerbtn.UseVisualStyleBackColor = false;
+            this.Registerbtn.Click += new System.EventHandler(this.Registerbtn_Click);
             // 
             // cancelregisbtn
             // 
@@ -238,11 +224,51 @@
             this.cancelregisbtn.UseVisualStyleBackColor = false;
             this.cancelregisbtn.Click += new System.EventHandler(this.cancelregisbtn_Click);
             // 
+            // lblerrorinput
+            // 
+            this.lblerrorinput.AutoSize = true;
+            this.lblerrorinput.Location = new System.Drawing.Point(450, 216);
+            this.lblerrorinput.Name = "lblerrorinput";
+            this.lblerrorinput.Size = new System.Drawing.Size(0, 16);
+            this.lblerrorinput.TabIndex = 20;
+            // 
+            // phonelbl
+            // 
+            this.phonelbl.AutoSize = true;
+            this.phonelbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phonelbl.Location = new System.Drawing.Point(436, 98);
+            this.phonelbl.Name = "phonelbl";
+            this.phonelbl.Size = new System.Drawing.Size(58, 19);
+            this.phonelbl.TabIndex = 21;
+            this.phonelbl.Text = "Phone";
+            // 
+            // phonetxt
+            // 
+            this.phonetxt.Location = new System.Drawing.Point(525, 95);
+            this.phonetxt.Name = "phonetxt";
+            this.phonetxt.Size = new System.Drawing.Size(207, 22);
+            this.phonetxt.TabIndex = 22;
+            // 
+            // Regbacklbl
+            // 
+            this.Regbacklbl.AutoSize = true;
+            this.Regbacklbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Regbacklbl.Location = new System.Drawing.Point(12, 9);
+            this.Regbacklbl.Name = "Regbacklbl";
+            this.Regbacklbl.Size = new System.Drawing.Size(126, 19);
+            this.Regbacklbl.TabIndex = 23;
+            this.Regbacklbl.Text = "< Back to Login";
+            this.Regbacklbl.Click += new System.EventHandler(this.Regbacklbl_Click);
+            // 
             // registation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 461);
+            this.Controls.Add(this.Regbacklbl);
+            this.Controls.Add(this.phonetxt);
+            this.Controls.Add(this.phonelbl);
+            this.Controls.Add(this.lblerrorinput);
             this.Controls.Add(this.cancelregisbtn);
             this.Controls.Add(this.Registerbtn);
             this.Controls.Add(this.genderFemalerb);
@@ -256,10 +282,8 @@
             this.Controls.Add(this.doblbl);
             this.Controls.Add(this.emailtxt);
             this.Controls.Add(this.emaillbl);
-            this.Controls.Add(this.lstntxt);
-            this.Controls.Add(this.lstnlbl);
-            this.Controls.Add(this.fstntxt);
-            this.Controls.Add(this.fstnlbl);
+            this.Controls.Add(this.fntxt);
+            this.Controls.Add(this.fnlbl);
             this.Controls.Add(this.registationlbl);
             this.Controls.Add(this.Thelibrarytitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -274,10 +298,8 @@
 
         private System.Windows.Forms.Label Thelibrarytitle;
         private System.Windows.Forms.Label registationlbl;
-        private System.Windows.Forms.Label fstnlbl;
-        private System.Windows.Forms.TextBox fstntxt;
-        private System.Windows.Forms.Label lstnlbl;
-        private System.Windows.Forms.TextBox lstntxt;
+        private System.Windows.Forms.Label fnlbl;
+        private System.Windows.Forms.TextBox fntxt;
         private System.Windows.Forms.Label emaillbl;
         private System.Windows.Forms.TextBox emailtxt;
         private System.Windows.Forms.Label doblbl;
@@ -291,5 +313,9 @@
         private System.Windows.Forms.RadioButton genderFemalerb;
         private System.Windows.Forms.Button Registerbtn;
         private System.Windows.Forms.Button cancelregisbtn;
+        private System.Windows.Forms.Label lblerrorinput;
+        private System.Windows.Forms.Label phonelbl;
+        private System.Windows.Forms.TextBox phonetxt;
+        private System.Windows.Forms.Label Regbacklbl;
     }
 }
