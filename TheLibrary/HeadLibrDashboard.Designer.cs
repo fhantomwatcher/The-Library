@@ -1,6 +1,6 @@
 ﻿namespace TheLibrary
 {
-    partial class Dashboard
+    partial class HeadLibrDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeadLibrDashboard));
             this.Dsidepanel = new System.Windows.Forms.Panel();
             this.plogoutbtn = new System.Windows.Forms.Button();
             this.pbtnsettings = new System.Windows.Forms.Button();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TheLibrary
 {
-    public partial class Dashboard : Form
+    public partial class HeadLibrDashboard : Form
     {
-        public Dashboard()
+        public HeadLibrDashboard()
         {
             InitializeComponent();
         }

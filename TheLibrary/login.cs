@@ -77,7 +77,7 @@ namespace TheLibrary
 
             if (loginSuccess)
             {
-                Dashboard dashboard = new Dashboard();
+                HeadLibrDashboard dashboard = new HeadLibrDashboard();
                 dashboard.Show();
 
                 this.Hide();

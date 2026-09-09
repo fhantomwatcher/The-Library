@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="HeadLibrDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <Compile Include="HeadLibrDashboard.Designer.cs">
+      <DependentUpon>HeadLibrDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperLib\DatabaseHelper.cs" />
     <Compile Include="HelperLib\InputValidationHelper.cs" />
@@ -74,8 +74,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TheLibraryDBDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="HeadLibrDashboard.resx">
+      <DependentUpon>HeadLibrDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
