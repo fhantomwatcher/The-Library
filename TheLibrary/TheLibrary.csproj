@@ -46,27 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HeadLibrDashboard.cs">
+    <Compile Include="Forms\HeadLibrDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HeadLibrDashboard.Designer.cs">
+    <Compile Include="Forms\HeadLibrDashboard.Designer.cs">
       <DependentUpon>HeadLibrDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperLib\DatabaseHelper.cs" />
     <Compile Include="HelperLib\InputValidationHelper.cs" />
     <Compile Include="HelperLib\LoginVerificationHelper.cs" />
-    <Compile Include="login.cs">
+    <Compile Include="Forms\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
+    <Compile Include="Forms\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="UserControl\ProfileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ProfileControl.Designer.cs">
+      <DependentUpon>ProfileControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="registation.cs">
+    <Compile Include="Forms\registation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registation.Designer.cs">
+    <Compile Include="Forms\registation.Designer.cs">
       <DependentUpon>registation.cs</DependentUpon>
     </Compile>
     <Compile Include="TheLibraryDBDataSet.Designer.cs">
@@ -74,11 +81,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TheLibraryDBDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="HeadLibrDashboard.resx">
+    <EmbeddedResource Include="Forms\HeadLibrDashboard.resx">
       <DependentUpon>HeadLibrDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
+    <EmbeddedResource Include="Forms\login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ProfileControl.resx">
+      <DependentUpon>ProfileControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,7 +99,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="registation.resx">
+    <EmbeddedResource Include="Forms\registation.resx">
       <DependentUpon>registation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheLibrary.HelperLib;
+using TheLibrary.Models;
 
 namespace TheLibrary
 {
@@ -70,24 +71,46 @@ namespace TheLibrary
             // Now check email and password in database
             LoginVerificationHelper loginHelper = new LoginVerificationHelper();
 
-            bool loginSuccess = loginHelper.VerifyLogin(
-                unemtxt.Text.Trim(),
-                passtxt.Text
-            );
+            UserInfo user = loginHelper.VerifyLogin(
+                    unemtxt.Text.Trim(),
+                    passtxt.Text);
 
-            if (loginSuccess)
+            if (user != null)
             {
-                HeadLibrDashboard dashboard = new HeadLibrDashboard();
-                dashboard.Show();
+                if (user.Role == "Head Librarian" || user.Role == "Headlibrarian")
+                {
+                    HeadLibrDashboard dashboard = new HeadLibrDashboard(user, this);
 
-                this.Hide();
+                    dashboard.Show();
 
-                MessageBox.Show("Login successful!");
+                    this.Hide();
 
+                    MessageBox.Show(
+                        dashboard,
+                        "Login successful!",
+                        "Login",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Access denied. This dashboard is only for Head Librarians.",
+                        "Access Denied",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+                }
             }
             else
             {
-                MessageBox.Show("Invalid email or password.");
+                MessageBox.Show(
+                    "Invalid email or password.",
+                    "Login Failed",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
 

@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheLibrary.Models;
 
 namespace TheLibrary
 {
     public partial class HeadLibrDashboard : Form
     {
-        public HeadLibrDashboard()
+        private login loginForm;
+        private UserInfo currentUser;
+        public HeadLibrDashboard(UserInfo user, login loginForm)
         {
             InitializeComponent();
+            this.currentUser = user;
+            this.loginForm = loginForm;
+
+            this.Text = $"Dashboard | {currentUser.FullName} | {currentUser.Role}";
         }
 
         private void plogoutbtn_Click(object sender, EventArgs e)
@@ -33,6 +40,17 @@ namespace TheLibrary
 
                 this.Close();
             }
+        }
+
+        private void pbtnProfile_Click(object sender, EventArgs e)
+        {
+            ProfileControl profile = new ProfileControl(currentUser);
+
+            panelContant.Controls.Clear();
+
+            profile.Dock = DockStyle.Fill;
+
+            panelContant.Controls.Add(profile);
         }
     }
 }
