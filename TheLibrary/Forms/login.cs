@@ -137,5 +137,14 @@ namespace TheLibrary
                 lblerrorpass.Visible = false;
             }
         }
+
+        private void loginbtn_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                loginbtn.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

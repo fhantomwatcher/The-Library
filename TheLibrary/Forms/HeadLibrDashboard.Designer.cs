@@ -68,6 +68,7 @@
             this.pbtnDashboard.TabIndex = 6;
             this.pbtnDashboard.Text = "Dashboard";
             this.pbtnDashboard.UseVisualStyleBackColor = true;
+            this.pbtnDashboard.Click += new System.EventHandler(this.pbtnDashboard_Click);
             // 
             // pbtnProfile
             // 
@@ -91,6 +92,7 @@
             this.pbtnStaff.TabIndex = 4;
             this.pbtnStaff.Text = "Staffs";
             this.pbtnStaff.UseVisualStyleBackColor = true;
+            this.pbtnStaff.Click += new System.EventHandler(this.pbtnStaff_Click);
             // 
             // pmembersbtn
             // 

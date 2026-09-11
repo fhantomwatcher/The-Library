@@ -100,6 +100,7 @@
             this.loginbtn.Text = "Login";
             this.loginbtn.UseVisualStyleBackColor = true;
             this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
+            this.loginbtn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.loginbtn_KeyDown);
             // 
             // gotoregislbl
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheLibrary.Models;
+using TheLibrary.UserPanelControl;
 
 namespace TheLibrary
 {
@@ -22,6 +23,7 @@ namespace TheLibrary
             this.loginForm = loginForm;
 
             this.Text = $"Dashboard | {currentUser.FullName} | {currentUser.Role}";
+            ShowDashboard();
         }
 
         private void plogoutbtn_Click(object sender, EventArgs e)
@@ -51,6 +53,39 @@ namespace TheLibrary
             profile.Dock = DockStyle.Fill;
 
             panelContant.Controls.Add(profile);
+        }
+
+        private void ShowDashboard()
+        {
+            DashboardControl dashboard = new DashboardControl(currentUser);
+
+            panelContant.Controls.Clear();
+
+            dashboard.Dock = DockStyle.Fill;
+
+            panelContant.Controls.Add(dashboard);
+        }
+
+        private void pbtnDashboard_Click(object sender, EventArgs e)
+        {
+            ShowDashboard();
+        }
+
+
+        private void ShowStaff()
+        {
+            StaffsControl staff = new StaffsControl();
+
+            panelContant.Controls.Clear();
+
+            staff.Dock = DockStyle.Fill;
+
+            panelContant.Controls.Add(staff);
+        }
+
+        private void pbtnStaff_Click(object sender, EventArgs e)
+        {
+            ShowStaff();
         }
     }
 }
