@@ -155,6 +155,7 @@
             this.Controls.Add(this.Thelibrarytitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.login_Load);
             this.ResumeLayout(false);

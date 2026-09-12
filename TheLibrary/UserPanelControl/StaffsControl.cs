@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheLibrary.Forms;
 using TheLibrary.HelperLib;
 
 namespace TheLibrary.UserPanelControl
@@ -189,6 +190,16 @@ namespace TheLibrary.UserPanelControl
                 LSearchbtn.PerformClick();
                 e.SuppressKeyPress = true;
             }
+        }
+
+        private void Deletebtn_Click(object sender, EventArgs e)
+        {
+            DeleteStaffForm deleteForm = new DeleteStaffForm();
+
+            deleteForm.ShowDialog();
+
+            LoadHeadLibrarians();
+            LoadLibrarians();
         }
     }
 }

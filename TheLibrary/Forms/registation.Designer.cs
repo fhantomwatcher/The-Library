@@ -288,6 +288,7 @@
             this.Controls.Add(this.Thelibrarytitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "registation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "registation";
             this.ResumeLayout(false);
             this.PerformLayout();

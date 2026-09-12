@@ -72,7 +72,7 @@
             // 
             this.addstflbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addstflbl.ForeColor = System.Drawing.Color.LimeGreen;
-            this.addstflbl.Location = new System.Drawing.Point(588, 57);
+            this.addstflbl.Location = new System.Drawing.Point(489, 51);
             this.addstflbl.Name = "addstflbl";
             this.addstflbl.Size = new System.Drawing.Size(109, 34);
             this.addstflbl.TabIndex = 2;
@@ -123,12 +123,13 @@
             // 
             this.Deletebtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Deletebtn.ForeColor = System.Drawing.Color.Crimson;
-            this.Deletebtn.Location = new System.Drawing.Point(588, 232);
+            this.Deletebtn.Location = new System.Drawing.Point(604, 51);
             this.Deletebtn.Name = "Deletebtn";
             this.Deletebtn.Size = new System.Drawing.Size(109, 34);
             this.Deletebtn.TabIndex = 6;
             this.Deletebtn.Text = "Delete";
             this.Deletebtn.UseVisualStyleBackColor = true;
+            this.Deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
             // 
             // HLSearchtxt
             // 
@@ -136,11 +137,11 @@
             this.HLSearchtxt.Name = "HLSearchtxt";
             this.HLSearchtxt.Size = new System.Drawing.Size(163, 22);
             this.HLSearchtxt.TabIndex = 7;
-            this.HLSearchtxt.Text = "search";
             this.HLSearchtxt.TextChanged += new System.EventHandler(this.HLSearchtxt_TextChanged);
             // 
             // HLSearchbtn
             // 
+            this.HLSearchbtn.ForeColor = System.Drawing.Color.Goldenrod;
             this.HLSearchbtn.Location = new System.Drawing.Point(394, 72);
             this.HLSearchbtn.Name = "HLSearchbtn";
             this.HLSearchbtn.Size = new System.Drawing.Size(75, 23);
@@ -152,6 +153,7 @@
             // 
             // LSearchbtn
             // 
+            this.LSearchbtn.ForeColor = System.Drawing.Color.Goldenrod;
             this.LSearchbtn.Location = new System.Drawing.Point(394, 242);
             this.LSearchbtn.Name = "LSearchbtn";
             this.LSearchbtn.Size = new System.Drawing.Size(75, 23);
@@ -167,7 +169,6 @@
             this.LSearchtxt.Name = "LSearchtxt";
             this.LSearchtxt.Size = new System.Drawing.Size(163, 22);
             this.LSearchtxt.TabIndex = 9;
-            this.LSearchtxt.Text = "search";
             this.LSearchtxt.TextChanged += new System.EventHandler(this.LSearchtxt_TextChanged);
             // 
             // StaffsControl

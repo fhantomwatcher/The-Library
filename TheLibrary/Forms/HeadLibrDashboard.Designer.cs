@@ -157,6 +157,7 @@
             this.Controls.Add(this.Dsidepanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HeadLibrDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.Dsidepanel.ResumeLayout(false);
             this.ResumeLayout(false);
