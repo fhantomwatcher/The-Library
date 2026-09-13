@@ -93,10 +93,27 @@ namespace TheLibrary
                         MessageBoxIcon.Information
                     );
                 }
+                else if (user.Role == "Librarian" || user.Role == "librarian")
+                {
+                    HeadLibrDashboard dashboard = new HeadLibrDashboard(user, this);
+
+                    dashboard.Show();
+
+                    this.Hide();
+
+                    MessageBox.Show(
+                        dashboard,
+                        "Login successful!",
+                        "Login",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                }
+
                 else
                 {
                     MessageBox.Show(
-                        "Access denied. This dashboard is only for Head Librarians.",
+                        "Access denied. You have no permission.",
                         "Access Denied",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning

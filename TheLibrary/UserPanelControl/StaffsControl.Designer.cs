@@ -78,6 +78,7 @@
             this.addstflbl.TabIndex = 2;
             this.addstflbl.Text = "Add Staff";
             this.addstflbl.UseVisualStyleBackColor = true;
+            this.addstflbl.Click += new System.EventHandler(this.addstflbl_Click);
             // 
             // DgvHL
             // 

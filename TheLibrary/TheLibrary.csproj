@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AddStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddStaffForm.Designer.cs">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DeleteStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="UserPanelControl\StaffsControl.Designer.cs">
       <DependentUpon>StaffsControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AddStaffForm.resx">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DeleteStaffForm.resx">
       <DependentUpon>DeleteStaffForm.cs</DependentUpon>
     </EmbeddedResource>

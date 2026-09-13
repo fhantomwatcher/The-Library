@@ -201,5 +201,26 @@ namespace TheLibrary.UserPanelControl
             LoadHeadLibrarians();
             LoadLibrarians();
         }
+
+        private void addstflbl_Click(object sender, EventArgs e)
+        {
+            AddStaffForm addStaffForm = new AddStaffForm();
+
+            addStaffForm.ShowDialog();
+
+            LoadHeadLibrarians();
+            LoadLibrarians();
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
 }
