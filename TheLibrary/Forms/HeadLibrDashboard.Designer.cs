@@ -104,6 +104,7 @@
             this.pmembersbtn.TabIndex = 3;
             this.pmembersbtn.Text = "Members";
             this.pmembersbtn.UseVisualStyleBackColor = true;
+            this.pmembersbtn.Click += new System.EventHandler(this.pmembersbtn_Click);
             // 
             // pbtnBooks
             // 

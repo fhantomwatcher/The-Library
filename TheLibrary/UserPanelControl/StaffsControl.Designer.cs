@@ -42,6 +42,7 @@
             this.HLSearchbtn = new System.Windows.Forms.Button();
             this.LSearchbtn = new System.Windows.Forms.Button();
             this.LSearchtxt = new System.Windows.Forms.TextBox();
+            this.EditBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvHL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.theLibraryDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.theLibraryDBDataSetBindingSource)).BeginInit();
@@ -72,7 +73,7 @@
             // 
             this.addstflbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addstflbl.ForeColor = System.Drawing.Color.LimeGreen;
-            this.addstflbl.Location = new System.Drawing.Point(489, 51);
+            this.addstflbl.Location = new System.Drawing.Point(200, 436);
             this.addstflbl.Name = "addstflbl";
             this.addstflbl.Size = new System.Drawing.Size(109, 34);
             this.addstflbl.TabIndex = 2;
@@ -82,6 +83,7 @@
             // 
             // DgvHL
             // 
+            this.DgvHL.AllowUserToAddRows = false;
             this.DgvHL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvHL.Location = new System.Drawing.Point(61, 103);
             this.DgvHL.Name = "DgvHL";
@@ -112,6 +114,7 @@
             // 
             // DgvL
             // 
+            this.DgvL.AllowUserToAddRows = false;
             this.DgvL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvL.Location = new System.Drawing.Point(61, 276);
             this.DgvL.Name = "DgvL";
@@ -124,7 +127,7 @@
             // 
             this.Deletebtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Deletebtn.ForeColor = System.Drawing.Color.Crimson;
-            this.Deletebtn.Location = new System.Drawing.Point(604, 51);
+            this.Deletebtn.Location = new System.Drawing.Point(439, 436);
             this.Deletebtn.Name = "Deletebtn";
             this.Deletebtn.Size = new System.Drawing.Size(109, 34);
             this.Deletebtn.TabIndex = 6;
@@ -172,10 +175,22 @@
             this.LSearchtxt.TabIndex = 9;
             this.LSearchtxt.TextChanged += new System.EventHandler(this.LSearchtxt_TextChanged);
             // 
+            // EditBtn
+            // 
+            this.EditBtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditBtn.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.EditBtn.Location = new System.Drawing.Point(315, 436);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(118, 34);
+            this.EditBtn.TabIndex = 11;
+            this.EditBtn.Text = "Edit";
+            this.EditBtn.UseVisualStyleBackColor = true;
+            // 
             // StaffsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.LSearchbtn);
             this.Controls.Add(this.LSearchtxt);
             this.Controls.Add(this.HLSearchbtn);
@@ -213,5 +228,6 @@
         private System.Windows.Forms.Button HLSearchbtn;
         private System.Windows.Forms.Button LSearchbtn;
         private System.Windows.Forms.TextBox LSearchtxt;
+        private System.Windows.Forms.Button EditBtn;
     }
 }

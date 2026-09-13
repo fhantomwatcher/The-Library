@@ -83,9 +83,23 @@ namespace TheLibrary
             panelContant.Controls.Add(staff);
         }
 
+        private void ShowMembers()
+        {
+            MembersControl members = new MembersControl();
+
+            panelContant.Controls.Clear();
+            members.Dock = DockStyle.Fill;
+            panelContant.Controls.Add(members);
+        }
+
         private void pbtnStaff_Click(object sender, EventArgs e)
         {
             ShowStaff();
+        }
+
+        private void pmembersbtn_Click(object sender, EventArgs e)
+        {
+            ShowMembers();
         }
     }
 }

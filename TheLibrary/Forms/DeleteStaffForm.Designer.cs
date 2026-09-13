@@ -69,6 +69,7 @@
             // 
             // deletedgv
             // 
+            this.deletedgv.AllowUserToAddRows = false;
             this.deletedgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.deletedgv.Location = new System.Drawing.Point(30, 57);
             this.deletedgv.MultiSelect = false;

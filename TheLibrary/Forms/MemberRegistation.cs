@@ -5,15 +5,17 @@ using TheLibrary.HelperLib;
 
 namespace TheLibrary
 {
-    public partial class registation : Form
+    public partial class MemberRegistation : Form
     {
         private readonly DatabaseHelper db = new DatabaseHelper();
+        private bool openedFromMemberPanel = false;
 
-        public registation()
+        public MemberRegistation(bool fromMemberPanel = false)
         {
             InitializeComponent();
 
             this.StartPosition = FormStartPosition.CenterScreen;
+            openedFromMemberPanel = fromMemberPanel;
         }
 
         private void Dobpick_ValueChanged(object sender, EventArgs e)
@@ -23,10 +25,16 @@ namespace TheLibrary
 
         private void cancelregisbtn_Click(object sender, EventArgs e)
         {
-            login login = new login();
-            login.Show();
-
-            this.Hide();
+            if (openedFromMemberPanel)
+            {
+                this.Close();
+            }
+            else
+            {
+                login login = new login();
+                login.Show();
+                this.Hide();
+            }
         }
 
         private void Registerbtn_Click(object sender, EventArgs e)
@@ -287,11 +295,16 @@ namespace TheLibrary
                         MessageBoxIcon.Information
                     );
 
-                    // Go to Login
-                    login login = new login();
-                    login.Show();
-
-                    this.Hide();
+                    if (openedFromMemberPanel)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        login login = new login();
+                        login.Show();
+                        this.Hide();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -307,12 +320,24 @@ namespace TheLibrary
             }
         }
 
-        private void Regbacklbl_Click(object sender, EventArgs e)
-        {
-            login login = new login();
-            login.Show();
 
-            this.Hide();
+        
+
+
+
+
+    private void Regbacklbl_Click(object sender, EventArgs e)
+        {
+            if (openedFromMemberPanel)
+            {
+                this.Close();
+            }
+            else
+            {
+                login login = new login();
+                login.Show();
+                this.Hide();
+            }
         }
     }
 }

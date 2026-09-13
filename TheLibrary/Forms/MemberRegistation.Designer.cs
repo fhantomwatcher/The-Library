@@ -1,6 +1,6 @@
 ﻿namespace TheLibrary
 {
-    partial class registation
+    partial class MemberRegistation
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registation));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberRegistation));
             this.Thelibrarytitle = new System.Windows.Forms.Label();
             this.registationlbl = new System.Windows.Forms.Label();
             this.fnlbl = new System.Windows.Forms.Label();
@@ -255,12 +255,12 @@
             this.Regbacklbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Regbacklbl.Location = new System.Drawing.Point(12, 9);
             this.Regbacklbl.Name = "Regbacklbl";
-            this.Regbacklbl.Size = new System.Drawing.Size(126, 19);
+            this.Regbacklbl.Size = new System.Drawing.Size(60, 19);
             this.Regbacklbl.TabIndex = 23;
-            this.Regbacklbl.Text = "< Back to Login";
+            this.Regbacklbl.Text = "< Back";
             this.Regbacklbl.Click += new System.EventHandler(this.Regbacklbl_Click);
             // 
-            // registation
+            // MemberRegistation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -287,7 +287,7 @@
             this.Controls.Add(this.registationlbl);
             this.Controls.Add(this.Thelibrarytitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "registation";
+            this.Name = "MemberRegistation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "registation";
             this.ResumeLayout(false);

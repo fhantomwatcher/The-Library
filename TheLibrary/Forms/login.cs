@@ -93,22 +93,22 @@ namespace TheLibrary
                         MessageBoxIcon.Information
                     );
                 }
-                else if (user.Role == "Librarian" || user.Role == "librarian")
-                {
-                    HeadLibrDashboard dashboard = new HeadLibrDashboard(user, this);
+                //else if (user.Role == "Librarian" || user.Role == "librarian")
+                //{
+                //    HeadLibrDashboard dashboard = new HeadLibrDashboard(user, this);
 
-                    dashboard.Show();
+                //    dashboard.Show();
 
-                    this.Hide();
+                //    this.Hide();
 
-                    MessageBox.Show(
-                        dashboard,
-                        "Login successful!",
-                        "Login",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                    );
-                }
+                //    MessageBox.Show(
+                //        dashboard,
+                //        "Login successful!",
+                //        "Login",
+                //        MessageBoxButtons.OK,
+                //        MessageBoxIcon.Information
+                //    );
+                //}
 
                 else
                 {
@@ -133,7 +133,7 @@ namespace TheLibrary
 
         private void gotoregislbl_Click(object sender, EventArgs e)
         {
-            registation registation = new registation();
+            MemberRegistation registation = new MemberRegistation();
             registation.Show();
 
             this.Hide();
