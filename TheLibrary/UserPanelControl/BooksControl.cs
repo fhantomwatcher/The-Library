@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TheLibrary.Forms;
+using TheLibrary.Forms.Books;
 using TheLibrary.HelperLib;
 
 namespace TheLibrary.UserPanelControl
@@ -102,6 +103,15 @@ namespace TheLibrary.UserPanelControl
             EditBookForm editBookForm = new EditBookForm();
 
             editBookForm.ShowDialog();
+
+            LoadBooks();
+        }
+
+        private void RemoveBtn_Click(object sender, EventArgs e)
+        {
+            DeleteBookForm deleteBookForm = new DeleteBookForm();
+
+            deleteBookForm.ShowDialog();
 
             LoadBooks();
         }

@@ -53,6 +53,18 @@
     <Compile Include="Forms\Books\AddBookForm.Designer.cs">
       <DependentUpon>AddBookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Books\DeleteBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Books\DeleteBookForm.Designer.cs">
+      <DependentUpon>DeleteBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Books\ManageBookCopiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Books\ManageBookCopiesForm.Designer.cs">
+      <DependentUpon>ManageBookCopiesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\HeadLibrarian\AddStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +156,12 @@
     </Compile>
     <EmbeddedResource Include="Forms\Books\AddBookForm.resx">
       <DependentUpon>AddBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Books\DeleteBookForm.resx">
+      <DependentUpon>DeleteBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Books\ManageBookCopiesForm.resx">
+      <DependentUpon>ManageBookCopiesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HeadLibrarian\AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
