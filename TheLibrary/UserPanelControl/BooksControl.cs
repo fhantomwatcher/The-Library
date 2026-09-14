@@ -30,19 +30,47 @@ namespace TheLibrary.UserPanelControl
         private void LoadBooks()
         {
             string query = @"
-                SELECT
-                    b.BookID,
-                    b.ISBN,
-                    b.Title,
-                    b.Author,
-                    c.CategoryName,
-                    b.Publisher,
-                    b.PublishedYear,
-                    b.ShelfLocation
-                FROM Books b
-                INNER JOIN Categories c
-                    ON b.CategoryID = c.CategoryID
-                ORDER BY b.BookID";
+        SELECT
+            b.BookID,
+            b.ISBN,
+            b.Title,
+            b.Author,
+            c.CategoryName,
+            b.Publisher,
+            b.PublishedYear,
+            b.ShelfLocation,
+
+            COUNT(bc.CopyID) AS [Total Copies],
+
+            SUM(CASE
+                WHEN bc.Status = 'Available' THEN 1
+                ELSE 0
+            END) AS [Available],
+
+            SUM(CASE
+                WHEN bc.Status = 'Borrowed' THEN 1
+                ELSE 0
+            END) AS [Borrowed]
+
+        FROM Books b
+
+        INNER JOIN Categories c
+            ON b.CategoryID = c.CategoryID
+
+        LEFT JOIN BookCopies bc
+            ON b.BookID = bc.BookID
+
+        GROUP BY
+            b.BookID,
+            b.ISBN,
+            b.Title,
+            b.Author,
+            c.CategoryName,
+            b.Publisher,
+            b.PublishedYear,
+            b.ShelfLocation
+
+        ORDER BY b.BookID";
 
             using (SqlConnection conn = db.GetConnection())
             using (SqlDataAdapter adapter =
