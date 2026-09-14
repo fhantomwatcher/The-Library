@@ -101,19 +101,19 @@ namespace TheLibrary
 
                   this.Hide();
 
-                //    MessageBox.Show(
-                //        dashboard,
-                //        "Login successful!",
-                //        "Login",
-                //        MessageBoxButtons.OK,
-                //        MessageBoxIcon.Information
-                //    );
+                    MessageBox.Show(
+                        dashboard,
+                        "Login successful!",
+                        "Login",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
                 }
 
                 else
                 {
                     MessageBox.Show(
-                        "Access denied. You have no permission.",
+                        "Access denied. You have no permission or on account with permission.",
                         "Access Denied",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning
