@@ -93,13 +93,13 @@ namespace TheLibrary
                         MessageBoxIcon.Information
                     );
                 }
-                //else if (user.Role == "Librarian" || user.Role == "librarian")
-                //{
-                //    HeadLibrDashboard dashboard = new HeadLibrDashboard(user, this);
+                else if (user.Role == "Librarian" || user.Role == "librarian")
+                {
+                    LibrarianDashboard dashboard = new LibrarianDashboard();
 
-                //    dashboard.Show();
+                   dashboard.Show();
 
-                //    this.Hide();
+                  this.Hide();
 
                 //    MessageBox.Show(
                 //        dashboard,
@@ -108,7 +108,7 @@ namespace TheLibrary
                 //        MessageBoxButtons.OK,
                 //        MessageBoxIcon.Information
                 //    );
-                //}
+                }
 
                 else
                 {
@@ -162,6 +162,11 @@ namespace TheLibrary
                 loginbtn.PerformClick();
                 e.SuppressKeyPress = true;
             }
+        }
+
+        private void lblerrorEmail_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
