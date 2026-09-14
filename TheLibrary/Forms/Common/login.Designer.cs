@@ -46,7 +46,7 @@
             this.Thelibrarytitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Thelibrarytitle.Location = new System.Drawing.Point(161, 64);
             this.Thelibrarytitle.Name = "Thelibrarytitle";
-            this.Thelibrarytitle.Size = new System.Drawing.Size(137, 31);
+            this.Thelibrarytitle.Size = new System.Drawing.Size(143, 31);
             this.Thelibrarytitle.TabIndex = 0;
             this.Thelibrarytitle.Text = "TheLibrary";
             // 
@@ -122,10 +122,11 @@
             this.lblerrorEmail.ForeColor = System.Drawing.Color.IndianRed;
             this.lblerrorEmail.Location = new System.Drawing.Point(174, 226);
             this.lblerrorEmail.Name = "lblerrorEmail";
-            this.lblerrorEmail.Size = new System.Drawing.Size(114, 19);
+            this.lblerrorEmail.Size = new System.Drawing.Size(115, 19);
             this.lblerrorEmail.TabIndex = 7;
             this.lblerrorEmail.Text = "labelemailerror";
             this.lblerrorEmail.Visible = false;
+            this.lblerrorEmail.Click += new System.EventHandler(this.lblerrorEmail_Click);
             // 
             // lblerrorpass
             // 
@@ -134,7 +135,7 @@
             this.lblerrorpass.ForeColor = System.Drawing.Color.IndianRed;
             this.lblerrorpass.Location = new System.Drawing.Point(174, 298);
             this.lblerrorpass.Name = "lblerrorpass";
-            this.lblerrorpass.Size = new System.Drawing.Size(106, 19);
+            this.lblerrorpass.Size = new System.Drawing.Size(108, 19);
             this.lblerrorpass.TabIndex = 8;
             this.lblerrorpass.Text = "labelpasserror";
             this.lblerrorpass.Visible = false;
