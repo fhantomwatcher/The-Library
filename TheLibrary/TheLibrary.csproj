@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -70,6 +70,36 @@
     </Compile>
     <Compile Include="Forms\HeadLibrarian\AddStaffForm.Designer.cs">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Librarian\Fines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Librarian\Fines.designer.cs">
+      <DependentUpon>Fines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Librarian\IssueReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Librarian\IssueReturn.designer.cs">
+      <DependentUpon>IssueReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Librarian\LibrarianDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Librarian\LibrarianDashboard.designer.cs">
+      <DependentUpon>LibrarianDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Librarian\ManageMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Librarian\ManageMembers.designer.cs">
+      <DependentUpon>ManageMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Librarian\Reservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Librarian\Reservations.designer.cs">
+      <DependentUpon>Reservations.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Member\DeleteMemberForm.cs">
       <SubType>Form</SubType>
@@ -166,6 +196,21 @@
     <EmbeddedResource Include="Forms\HeadLibrarian\AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Librarian\Fines.resx">
+      <DependentUpon>Fines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Librarian\IssueReturn.resx">
+      <DependentUpon>IssueReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Librarian\LibrarianDashboard.resx">
+      <DependentUpon>LibrarianDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Librarian\ManageMembers.resx">
+      <DependentUpon>ManageMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Librarian\Reservations.resx">
+      <DependentUpon>Reservations.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Member\DeleteMemberForm.resx">
       <DependentUpon>DeleteMemberForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,8 +280,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Librarian\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
