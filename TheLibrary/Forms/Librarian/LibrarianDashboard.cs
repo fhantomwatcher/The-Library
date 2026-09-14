@@ -50,5 +50,13 @@ namespace TheLibrary
             form.Show();
             this.Hide();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+
+            this.Close();
+        }
     }
 }
