@@ -141,6 +141,7 @@
             this.ManageBookCopyBtn.TabIndex = 11;
             this.ManageBookCopyBtn.Text = "Manage";
             this.ManageBookCopyBtn.UseVisualStyleBackColor = true;
+            this.ManageBookCopyBtn.Click += new System.EventHandler(this.ManageBookCopyBtn_Click);
             // 
             // BooksControl
             // 

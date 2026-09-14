@@ -115,5 +115,14 @@ namespace TheLibrary.UserPanelControl
 
             LoadBooks();
         }
+
+        private void ManageBookCopyBtn_Click(object sender, EventArgs e)
+        {
+            ManageBookCopiesForm form = new ManageBookCopiesForm();
+
+            form.ShowDialog();
+
+            LoadBooks();
+        }
     }
 }

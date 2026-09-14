@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Books\AddBookCopyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Books\AddBookCopyForm.Designer.cs">
+      <DependentUpon>AddBookCopyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Books\AddBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,12 @@
     </Compile>
     <Compile Include="Forms\Books\DeleteBookForm.Designer.cs">
       <DependentUpon>DeleteBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Books\EditBookCopyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Books\EditBookCopyForm.Designer.cs">
+      <DependentUpon>EditBookCopyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Books\ManageBookCopiesForm.cs">
       <SubType>Form</SubType>
@@ -184,11 +196,17 @@
     <Compile Include="UserPanelControl\StaffsControl.Designer.cs">
       <DependentUpon>StaffsControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Books\AddBookCopyForm.resx">
+      <DependentUpon>AddBookCopyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Books\AddBookForm.resx">
       <DependentUpon>AddBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Books\DeleteBookForm.resx">
       <DependentUpon>DeleteBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Books\EditBookCopyForm.resx">
+      <DependentUpon>EditBookCopyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Books\ManageBookCopiesForm.resx">
       <DependentUpon>ManageBookCopiesForm.cs</DependentUpon>
