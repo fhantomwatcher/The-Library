@@ -34,6 +34,7 @@ namespace TheLibrary
             this.btnManageMember = new System.Windows.Forms.Button();
             this.btnFines = new System.Windows.Forms.Button();
             this.btnReservations = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -96,12 +97,25 @@ namespace TheLibrary
             this.btnReservations.UseVisualStyleBackColor = false;
             this.btnReservations.Click += new System.EventHandler(this.btnReservations_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.SystemColors.Info;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(583, 364);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(154, 74);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "LOGOUT";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // LibrarianDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnReservations);
             this.Controls.Add(this.btnFines);
             this.Controls.Add(this.btnManageMember);
@@ -121,5 +135,6 @@ namespace TheLibrary
         private System.Windows.Forms.Button btnManageMember;
         private System.Windows.Forms.Button btnFines;
         private System.Windows.Forms.Button btnReservations;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
