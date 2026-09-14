@@ -47,46 +47,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AddStaffForm.cs">
+    <Compile Include="Forms\Books\AddBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddStaffForm.Designer.cs">
+    <Compile Include="Forms\Books\AddBookForm.Designer.cs">
+      <DependentUpon>AddBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HeadLibrarian\AddStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HeadLibrarian\AddStaffForm.Designer.cs">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DeleteMemberForm.cs">
+    <Compile Include="Forms\Member\DeleteMemberForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DeleteMemberForm.Designer.cs">
+    <Compile Include="Forms\Member\DeleteMemberForm.Designer.cs">
       <DependentUpon>DeleteMemberForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DeleteStaffForm.cs">
+    <Compile Include="Forms\HeadLibrarian\DeleteStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DeleteStaffForm.Designer.cs">
+    <Compile Include="Forms\HeadLibrarian\DeleteStaffForm.Designer.cs">
       <DependentUpon>DeleteStaffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EditMemberForm.cs">
+    <Compile Include="Forms\Books\EditBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EditMemberForm.Designer.cs">
+    <Compile Include="Forms\Books\EditBookForm.Designer.cs">
+      <DependentUpon>EditBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member\EditMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\EditMemberForm.Designer.cs">
       <DependentUpon>EditMemberForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\HeadLibrDashboard.cs">
+    <Compile Include="Forms\HeadLibrarian\HeadLibrDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\HeadLibrDashboard.Designer.cs">
+    <Compile Include="Forms\HeadLibrarian\HeadLibrDashboard.Designer.cs">
       <DependentUpon>HeadLibrDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperLib\DatabaseHelper.cs" />
     <Compile Include="HelperLib\InputValidationHelper.cs" />
     <Compile Include="HelperLib\LoginVerificationHelper.cs" />
-    <Compile Include="Forms\login.cs">
+    <Compile Include="Forms\Common\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\login.Designer.cs">
+    <Compile Include="Forms\Common\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="UserPanelControl\BooksControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanelControl\BooksControl.Designer.cs">
+      <DependentUpon>BooksControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanelControl\DashboardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,10 +125,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\MemberRegistation.cs">
+    <Compile Include="Forms\Member\MemberRegistation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MemberRegistation.Designer.cs">
+    <Compile Include="Forms\Member\MemberRegistation.Designer.cs">
       <DependentUpon>MemberRegistation.cs</DependentUpon>
     </Compile>
     <Compile Include="TheLibraryDBDataSet.Designer.cs">
@@ -124,23 +142,32 @@
     <Compile Include="UserPanelControl\StaffsControl.Designer.cs">
       <DependentUpon>StaffsControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\AddStaffForm.resx">
+    <EmbeddedResource Include="Forms\Books\AddBookForm.resx">
+      <DependentUpon>AddBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HeadLibrarian\AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DeleteMemberForm.resx">
+    <EmbeddedResource Include="Forms\Member\DeleteMemberForm.resx">
       <DependentUpon>DeleteMemberForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DeleteStaffForm.resx">
+    <EmbeddedResource Include="Forms\HeadLibrarian\DeleteStaffForm.resx">
       <DependentUpon>DeleteStaffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EditMemberForm.resx">
+    <EmbeddedResource Include="Forms\Books\EditBookForm.resx">
+      <DependentUpon>EditBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\EditMemberForm.resx">
       <DependentUpon>EditMemberForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\HeadLibrDashboard.resx">
+    <EmbeddedResource Include="Forms\HeadLibrarian\HeadLibrDashboard.resx">
       <DependentUpon>HeadLibrDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\login.resx">
+    <EmbeddedResource Include="Forms\Common\login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanelControl\BooksControl.resx">
+      <DependentUpon>BooksControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPanelControl\DashboardControl.resx">
       <DependentUpon>DashboardControl.cs</DependentUpon>
@@ -160,7 +187,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\MemberRegistation.resx">
+    <EmbeddedResource Include="Forms\Member\MemberRegistation.resx">
       <DependentUpon>MemberRegistation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPanelControl\StaffsControl.resx">
@@ -190,6 +217,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Forms\Librarian\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

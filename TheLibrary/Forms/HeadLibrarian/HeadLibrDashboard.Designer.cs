@@ -116,6 +116,7 @@
             this.pbtnBooks.TabIndex = 2;
             this.pbtnBooks.Text = "Books";
             this.pbtnBooks.UseVisualStyleBackColor = true;
+            this.pbtnBooks.Click += new System.EventHandler(this.pbtnBooks_Click);
             // 
             // pbtnsettings
             // 

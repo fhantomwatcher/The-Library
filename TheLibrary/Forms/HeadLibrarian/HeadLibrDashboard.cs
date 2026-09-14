@@ -101,5 +101,24 @@ namespace TheLibrary
         {
             ShowMembers();
         }
+
+
+        private void ShowBooks()
+        {
+            BooksControl books = new BooksControl();
+
+            panelContant.Controls.Clear();
+
+            books.Dock = DockStyle.Fill;
+
+            panelContant.Controls.Add(books);
+        }
+
+
+
+        private void pbtnBooks_Click(object sender, EventArgs e)
+        {
+            ShowBooks();
+        }
     }
 }
