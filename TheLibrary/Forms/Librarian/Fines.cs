@@ -98,5 +98,14 @@ namespace TheLibrary
             dashboard.Show();
             this.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtFineID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtLoanID.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtAmount.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtReason.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+           
+        }
     }
 }

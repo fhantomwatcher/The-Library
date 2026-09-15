@@ -96,5 +96,13 @@ namespace TheLibrary
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtReservationID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtBookID.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtMemberID.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+           
+        }
     }
 }

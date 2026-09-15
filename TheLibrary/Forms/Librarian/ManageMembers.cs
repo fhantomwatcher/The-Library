@@ -40,9 +40,8 @@ namespace TheLibrary
         {
             SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True");
             conn.Open();
-            string query = "SELECT * FROM [USER] ; ";
-            //string query = "SELECT u.UserID, u.FullName, u.Email, u.Phone, m.MembershipDate, m.MaxBooksAllowed, m.MembershipStatus FROM User u INNER JOIN Members m ON u.UserID = m.UserID";
-            //string query = "SELECT u.UserID, u.FullName, u.Email, u.Phone, m.MembershipDate, m.MaxBooksAllowed, m.MembershipStatus FROM [User] u INNER JOIN Members m ON u.UserID = m.UserID";
+            string query = "SELECT * FROM [USERS]; ";
+ 
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter adp = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
@@ -71,7 +70,7 @@ namespace TheLibrary
             {
                 SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True");
                 conn.Open();
-                string query = "Update [User] set FullName='" + txtFullName.Text + "', Email='" + txtEmail.Text + "', Password='" + txtPassword.Text + "' where UserID=" + txtID.Text;
+                string query = "Update [Users] set FullName='" + txtFullName.Text + "', Email='" + txtEmail.Text + "', Password='" + txtPassword.Text + "' where UserID=" + txtID.Text;
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
                 Refresh();
@@ -98,7 +97,7 @@ namespace TheLibrary
             {
                 SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
                 conn.Open();
-                string query = "insert into [User] (FullName,Email,Password,Phone,Role,CreatedAt) values('" + name + "','" + email + "','" + pass + "','" + phone + "','Member',GETDATE())";
+                string query = "insert into [Users] (FullName,Email,Password,Phone,Role,CreatedAt) values('" + name + "','" + email + "','" + pass + "','" + phone + "','Member',GETDATE())";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
                 Refresh();
@@ -113,7 +112,7 @@ namespace TheLibrary
             SqlCommand cmd1 = new SqlCommand(query1, conn);
             cmd1.ExecuteNonQuery();
 
-           string query2 = "Delete from [User] where UserID=" + txtID.Text;
+           string query2 = "Delete from [Users] where UserID=" + txtID.Text;
             SqlCommand cmd2 = new SqlCommand(query2, conn);
             cmd2.ExecuteNonQuery();
 

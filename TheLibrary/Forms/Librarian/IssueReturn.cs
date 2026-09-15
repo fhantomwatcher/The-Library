@@ -118,5 +118,13 @@ namespace TheLibrary
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCopyID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtMemberID.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtIssuedBy.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            
+        }
     }
 }
