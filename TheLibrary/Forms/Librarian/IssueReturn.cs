@@ -29,7 +29,7 @@ namespace TheLibrary
         }
         private void Refresh()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
+            SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
             conn.Open();
             string query = "SELECT * FROM Loans";
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -61,7 +61,7 @@ namespace TheLibrary
 
             if (txtCopyID.Text != "" && txtMemberID.Text != "" && txtIssuedBy.Text != "")
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
+                SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
                 conn.Open();
 
                 string query = "insert into Loans (CopyID,MemberID,IssuedBy,IssueDate,DueDate,Status) values('" + copyId + "','" + memberId + "','" + issuedBy + "',GETDATE(),'" + dueDate + "','Active')";
@@ -86,7 +86,7 @@ namespace TheLibrary
                 lblErrorCopyID.Text = "Please enter Copy ID!";
             if (txtCopyID.Text != "")
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
+                SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
                 conn.Open();
 
                 string query = "Update Loans set ReturnDate=GETDATE(), Status='Returned' where CopyID=" + copyId + " and Status='Active'";

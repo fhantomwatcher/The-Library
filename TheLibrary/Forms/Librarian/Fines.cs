@@ -29,7 +29,7 @@ namespace TheLibrary
         }
         private void Refresh()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
+            SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
             conn.Open();
             string query = "SELECT * FROM Fines";
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -59,7 +59,7 @@ namespace TheLibrary
 
             if (txtLoanID.Text != "" && txtAmount.Text != "" && txtReason.Text != "")
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
+                SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
                 conn.Open();
 
                 string query = "insert into Fines (LoanID,Amount,Reason,IsPaid) values('" + loanId + "','" + amount + "','" + reason + "','0')";
@@ -80,7 +80,7 @@ namespace TheLibrary
 
             if (txtFineID.Text != "")
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
+                SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
                 conn.Open();
 
                 string query = "Update Fines set IsPaid='1', PaidDate=GETDATE() where FineID=" + fineId;

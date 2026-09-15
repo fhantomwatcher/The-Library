@@ -24,7 +24,7 @@ namespace TheLibrary
         }
         private void Refresh()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
+            SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
             conn.Open();
             string query = "SELECT * FROM Reservations";
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -52,7 +52,7 @@ namespace TheLibrary
 
             if (txtBookID.Text != "" && txtMemberID.Text != "")
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
+                SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
                 conn.Open();
 
                 string query = "insert into Reservations (BookID,MemberID,ReservationDate,ExpiryDate,Status) values('" + bookId + "','" + memberId + "',GETDATE(),'" + expiryDate + "','Pending')";
@@ -74,7 +74,7 @@ namespace TheLibrary
 
             if (txtReservationID.Text != "")
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
+                SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
                 conn.Open();
 
                 string query = "Update Reservations set Status='Cancelled' where ReservationID=" + reservationId;

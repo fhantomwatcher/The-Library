@@ -38,7 +38,7 @@ namespace TheLibrary
         }
         private void Refresh()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
             conn.Open();
             string query = "SELECT * FROM [USERS]; ";
  
@@ -68,7 +68,7 @@ namespace TheLibrary
 
             if (txtFullName.Text != "" && txtEmail.Text != "" && txtPassword.Text != "" && txtPhone.Text != "")
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
                 conn.Open();
                 string query = "Update [Users] set FullName='" + txtFullName.Text + "', Email='" + txtEmail.Text + "', Password='" + txtPassword.Text + "' where UserID=" + txtID.Text;
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -95,7 +95,7 @@ namespace TheLibrary
                 lblErrorPhone.Text = "Please enter phone!";
             if (txtFullName.Text != "" && txtEmail.Text != "" && txtPassword.Text != "" && txtPhone.Text != "")
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
+                SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
                 conn.Open();
                 string query = "insert into [Users] (FullName,Email,Password,Phone,Role,CreatedAt) values('" + name + "','" + email + "','" + pass + "','" + phone + "','Member',GETDATE())";
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -106,7 +106,7 @@ namespace TheLibrary
 
             private void btnDelete_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LMSDb;Integrated Security=True;");
+            SqlConnection conn = new SqlConnection(@"Data Source=FHANTOM\SQLEXPRESS;Initial Catalog=TheLibraryDB;Integrated Security=True;");
             conn.Open();
            string query1 = "Delete from Members where UserID=" + txtID.Text;
             SqlCommand cmd1 = new SqlCommand(query1, conn);
