@@ -15,15 +15,16 @@ namespace TheLibrary.Forms
     public partial class EditBookForm : Form
     {
         private readonly DatabaseHelper db = new DatabaseHelper();
+        private int currentUserID;
 
         private DataTable bookTable;
 
         private int selectedBookID = 0;
-        public EditBookForm()
+        public EditBookForm(int userID)
         {
             InitializeComponent();
+            currentUserID = userID;
 
-            
 
             LoadCategories();
             LoadBooks();
@@ -245,15 +246,25 @@ namespace TheLibrary.Forms
                     command.Parameters.AddWithValue(
                         "@BookID", selectedBookID);
 
-                    command.ExecuteNonQuery();
+                    int rowsAffected = command.ExecuteNonQuery();
 
-                    MessageBox.Show(
-                        "Book updated successfully!",
-                        "Success",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
+                    if (rowsAffected > 0)
+                    {
+                        ActivityLogHelper.Log(
+                            currentUserID,
+                            "Edit Book",
+                            $"Updated book \"{title}\" (Book ID: {selectedBookID})."
+                        );
 
-                    this.Close();
+                        MessageBox.Show(
+                            "Book updated successfully!",
+                            "Success",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information
+                        );
+
+                        this.Close();
+                    }
                 }
                 catch (SqlException ex)
                 {

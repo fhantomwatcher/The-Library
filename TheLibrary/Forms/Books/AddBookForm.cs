@@ -15,9 +15,11 @@ namespace TheLibrary.Forms
     public partial class AddBookForm : Form
     {
         private readonly DatabaseHelper db = new DatabaseHelper();
-        public AddBookForm()
+        private int currentUserID;
+        public AddBookForm(int userID)
         {
             InitializeComponent();
+            currentUserID = userID;
             LoadCategories();
         }
 
@@ -157,35 +159,36 @@ namespace TheLibrary.Forms
         }
 
         private void AddBook(
-            string title,
-            string author,
-            string isbn,
-            int categoryID,
-            string publisher,
-            int publishedYear,
-            string shelfLocation)
+    string title,
+    string author,
+    string isbn,
+    int categoryID,
+    string publisher,
+    int publishedYear,
+    string shelfLocation)
         {
             string query = @"
-                INSERT INTO Books
-                (
-                    CategoryID,
-                    Title,
-                    Author,
-                    ISBN,
-                    Publisher,
-                    PublishedYear,
-                    ShelfLocation
-                )
-                VALUES
-                (
-                    @CategoryID,
-                    @Title,
-                    @Author,
-                    @ISBN,
-                    @Publisher,
-                    @PublishedYear,
-                    @ShelfLocation
-                )";
+        INSERT INTO Books
+        (
+            CategoryID,
+            Title,
+            Author,
+            ISBN,
+            Publisher,
+            PublishedYear,
+            ShelfLocation
+        )
+        OUTPUT INSERTED.BookID
+        VALUES
+        (
+            @CategoryID,
+            @Title,
+            @Author,
+            @ISBN,
+            @Publisher,
+            @PublishedYear,
+            @ShelfLocation
+        )";
 
             using (SqlConnection conn = db.GetConnection())
             using (SqlCommand command =
@@ -250,7 +253,16 @@ namespace TheLibrary.Forms
                             shelfLocation);
                     }
 
-                    command.ExecuteNonQuery();
+                    // Get the newly created BookID
+                    int newBookID =
+                        Convert.ToInt32(command.ExecuteScalar());
+
+                    // Add activity log
+                    ActivityLogHelper.Log(
+                        currentUserID,
+                        "Add Book",
+                        $"Added book \"{title}\" (Book ID: {newBookID})."
+                    );
 
                     MessageBox.Show(
                         "Book added successfully!",

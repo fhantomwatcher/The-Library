@@ -105,7 +105,7 @@ namespace TheLibrary
 
         private void ShowBooks()
         {
-            BooksControl books = new BooksControl();
+            BooksControl books = new BooksControl(currentUser);
 
             panelContant.Controls.Clear();
 
@@ -119,6 +119,34 @@ namespace TheLibrary
         private void pbtnBooks_Click(object sender, EventArgs e)
         {
             ShowBooks();
+        }
+
+        private void ShowPersonalActivity()
+        {
+            PersonalActivityControl activity =
+                new PersonalActivityControl(currentUser);
+
+            panelContant.Controls.Clear();
+
+            activity.Dock = DockStyle.Fill;
+
+            panelContant.Controls.Add(activity);
+        }
+
+        private void PersonalActivityBTN_Click(object sender, EventArgs e)
+        {
+            ShowPersonalActivity();
+        }
+
+        private void pbtnsettings_Click(object sender, EventArgs e)
+        {
+            SystemSettingsControl settings = new SystemSettingsControl(currentUser);
+
+            panelContant.Controls.Clear();
+
+            settings.Dock = DockStyle.Fill;
+
+            panelContant.Controls.Add(settings);
         }
     }
 }

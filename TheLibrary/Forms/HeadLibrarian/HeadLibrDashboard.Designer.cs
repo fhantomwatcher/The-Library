@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeadLibrDashboard));
             this.Dsidepanel = new System.Windows.Forms.Panel();
+            this.PersonalActivityBTN = new System.Windows.Forms.Button();
             this.pbtnDashboard = new System.Windows.Forms.Button();
             this.pbtnProfile = new System.Windows.Forms.Button();
             this.pbtnStaff = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             // Dsidepanel
             // 
             this.Dsidepanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Dsidepanel.Controls.Add(this.PersonalActivityBTN);
             this.Dsidepanel.Controls.Add(this.pbtnDashboard);
             this.Dsidepanel.Controls.Add(this.pbtnProfile);
             this.Dsidepanel.Controls.Add(this.pbtnStaff);
@@ -57,6 +59,18 @@
             this.Dsidepanel.Name = "Dsidepanel";
             this.Dsidepanel.Size = new System.Drawing.Size(214, 531);
             this.Dsidepanel.TabIndex = 0;
+            // 
+            // PersonalActivityBTN
+            // 
+            this.PersonalActivityBTN.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersonalActivityBTN.ForeColor = System.Drawing.Color.DarkOrange;
+            this.PersonalActivityBTN.Location = new System.Drawing.Point(36, 156);
+            this.PersonalActivityBTN.Name = "PersonalActivityBTN";
+            this.PersonalActivityBTN.Size = new System.Drawing.Size(126, 52);
+            this.PersonalActivityBTN.TabIndex = 4;
+            this.PersonalActivityBTN.Text = "Personal Activity";
+            this.PersonalActivityBTN.UseVisualStyleBackColor = true;
+            this.PersonalActivityBTN.Click += new System.EventHandler(this.PersonalActivityBTN_Click);
             // 
             // pbtnDashboard
             // 
@@ -128,6 +142,7 @@
             this.pbtnsettings.TabIndex = 1;
             this.pbtnsettings.Text = "Settings";
             this.pbtnsettings.UseVisualStyleBackColor = true;
+            this.pbtnsettings.Click += new System.EventHandler(this.pbtnsettings_Click);
             // 
             // plogoutbtn
             // 
@@ -177,5 +192,6 @@
         private System.Windows.Forms.Button pbtnProfile;
         private System.Windows.Forms.Button pbtnDashboard;
         private System.Windows.Forms.Panel panelContant;
+        private System.Windows.Forms.Button PersonalActivityBTN;
     }
 }

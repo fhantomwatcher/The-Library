@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using TheLibrary.Forms;
 using TheLibrary.Forms.Books;
 using TheLibrary.HelperLib;
+using TheLibrary.Models;
 
 namespace TheLibrary.UserPanelControl
 {
@@ -18,11 +19,13 @@ namespace TheLibrary.UserPanelControl
     {
 
         private readonly DatabaseHelper db = new DatabaseHelper();
+        private UserInfo currentUser;
 
         private DataTable bookTable;
-        public BooksControl()
+        public BooksControl(UserInfo user)
         {
             InitializeComponent();
+            currentUser = user;
 
             LoadBooks();
         }
@@ -119,7 +122,7 @@ namespace TheLibrary.UserPanelControl
 
         private void AddBookBtn_Click(object sender, EventArgs e)
         {
-            AddBookForm addBookForm = new AddBookForm();
+            AddBookForm addBookForm = new AddBookForm(currentUser.UserID);
 
             addBookForm.ShowDialog();
 
@@ -128,7 +131,7 @@ namespace TheLibrary.UserPanelControl
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            EditBookForm editBookForm = new EditBookForm();
+            EditBookForm editBookForm = new EditBookForm(currentUser.UserID);
 
             editBookForm.ShowDialog();
 

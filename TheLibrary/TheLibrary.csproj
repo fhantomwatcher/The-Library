@@ -143,6 +143,7 @@
     <Compile Include="Forms\HeadLibrarian\HeadLibrDashboard.Designer.cs">
       <DependentUpon>HeadLibrDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelperLib\ActivityLogHelper.cs" />
     <Compile Include="HelperLib\DatabaseHelper.cs" />
     <Compile Include="HelperLib\InputValidationHelper.cs" />
     <Compile Include="HelperLib\LoginVerificationHelper.cs" />
@@ -171,6 +172,12 @@
     <Compile Include="UserPanelControl\MembersControl.Designer.cs">
       <DependentUpon>MembersControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserPanelControl\PersonalActivityControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanelControl\PersonalActivityControl.Designer.cs">
+      <DependentUpon>PersonalActivityControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanelControl\ProfileControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,6 +202,12 @@
     </Compile>
     <Compile Include="UserPanelControl\StaffsControl.Designer.cs">
       <DependentUpon>StaffsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanelControl\SystemSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanelControl\SystemSettingsControl.Designer.cs">
+      <DependentUpon>SystemSettingsControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Books\AddBookCopyForm.resx">
       <DependentUpon>AddBookCopyForm.cs</DependentUpon>
@@ -256,6 +269,9 @@
     <EmbeddedResource Include="UserPanelControl\MembersControl.resx">
       <DependentUpon>MembersControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserPanelControl\PersonalActivityControl.resx">
+      <DependentUpon>PersonalActivityControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserPanelControl\ProfileControl.resx">
       <DependentUpon>ProfileControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserPanelControl\StaffsControl.resx">
       <DependentUpon>StaffsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanelControl\SystemSettingsControl.resx">
+      <DependentUpon>SystemSettingsControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
